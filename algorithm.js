@@ -1,30 +1,29 @@
-# algorithm-scripting
-一些JavaScript算法练习
-
-[TOC]
-
-### 翻转字符串
-
-```javascript
+/**
+ * 翻转一个字符串
+ * @param  原始字符串
+ * @return 翻转后的字符串
+ */
 function reverseString (str) {
     var arr = str.split('');
     str = arr.reverse().join('');
     return str;
 }
-```
 
-### 求一个数的阶乘
-
-```javascript
+/**
+ * 求一个数的阶乘
+ * @param  整数num
+ * @return 阶乘结果!num
+ */
 function factorialize(num) {
     if(num === 0) return 1;
     return num * factorialize(num - 1);
 }
-```
 
-### 判断是否是回文
-
-```javascript
+/**
+ * 判断一个字符串是否是回文
+ * @param  字符串str
+ * @return 是回文返回true，否则false
+ */
 function isPalindrome(str) {
     // 如果一个字符串忽略标点符号、大小写和空格，
     // 正着读和反着读一模一样，
@@ -39,5 +38,6 @@ function isPalindrome(str) {
     }
     return flag;
 }
-```
 
+var result = isPalindrome('123321');
+console.log(result);
