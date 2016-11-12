@@ -41,3 +41,21 @@ function isPalindrome(str) {
 }
 ```
 
+### 找到最长的单词长度
+
+```javascript
+function findLongestWord(str) {
+    var arr = str.split(/\W/),
+        longestStr,
+        maxLength = 0;
+    // console.log(arr);
+    for(var i = 0; i < arr.length; i++) {
+        if(arr[i].length > maxLength) {
+            longestStr = arr[i];
+            maxLength = arr[i].length;
+        }
+    }
+    return longestStr.length;
+}
+```
+

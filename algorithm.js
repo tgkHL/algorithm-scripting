@@ -39,11 +39,16 @@ function isPalindrome(str) {
     return flag;
 }
 
+/**
+ * 找到最长单词长度
+ * @param  str
+ * @return 长度
+ */
 function findLongestWord(str) {
     var arr = str.split(/\W/),
         longestStr,
         maxLength = 0;
-    console.log(arr);
+    // console.log(arr);
     for(var i = 0; i < arr.length; i++) {
         if(arr[i].length > maxLength) {
             longestStr = arr[i];
