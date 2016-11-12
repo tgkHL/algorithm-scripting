@@ -29,7 +29,7 @@ function isPalindrome(str) {
     // 正着读和反着读一模一样，
     // 那么这个字符串就是palindrome(回文)。
     var flag = true;
-    str = str.replace(/\W/g, '').toLowerCase();
+    str = str.replace(/[\W_]/g, '').toLowerCase();
     for(var i = 0, j = str.length-1; i < j; i++, j--) {
         if(str.charAt(i) !== str.charAt(j)) {
             flag = false;
@@ -39,5 +39,5 @@ function isPalindrome(str) {
     return flag;
 }
 
-var result = isPalindrome('123321');
+var result = isPalindrome('0_0 (: /-\ :) 0-0');
 console.log(result);
