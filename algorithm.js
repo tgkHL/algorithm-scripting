@@ -39,5 +39,20 @@ function isPalindrome(str) {
     return flag;
 }
 
-var result = isPalindrome('0_0 (: /-\ :) 0-0');
+function findLongestWord(str) {
+    var arr = str.split(/\W/),
+        longestStr,
+        maxLength = 0;
+    console.log(arr);
+    for(var i = 0; i < arr.length; i++) {
+        if(arr[i].length > maxLength) {
+            longestStr = arr[i];
+            maxLength = arr[i].length;
+        }
+    }
+    return longestStr.length;
+}
+
+// 测试
+var result = findLongestWord('hello,world.');
 console.log(result);
