@@ -75,3 +75,20 @@ function titleCase(str) {
 }
 ```
 
+### 获取子数组最大数字，并组成新数组
+
+```javascript
+function largestOfFour(arr) {
+    var result = [];
+    for(var i = 0; i < arr.length; i++) {
+        var maxNum = arr[i][0];
+        for(var j = 1; j < arr[i].length; j++) {
+            if(arr[i][j] > maxNum) {
+                maxNum = arr[i][j];
+            }
+        }
+        result[result.length] = maxNum;
+    }
+    return result;
+}
+```

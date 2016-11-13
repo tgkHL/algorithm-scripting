@@ -75,6 +75,25 @@ function titleCase(str) {
     return str;
 }
 
+/**
+ * 将二重数组中的每个子数组中的最大数组成新数组
+ * @param  {[type]} arr [description]
+ * @return {[type]}     [description]
+ */
+function largestOfFour(arr) {
+    var result = [];
+    for(var i = 0; i < arr.length; i++) {
+        var maxNum = arr[i][0];
+        for(var j = 1; j < arr[i].length; j++) {
+            if(arr[i][j] > maxNum) {
+                maxNum = arr[i][j];
+            }
+        }
+        result[result.length] = maxNum;
+    }
+    return result;
+}
+
 // 测试
 var result = titleCase('HEllo worLd');
 console.log(result);
