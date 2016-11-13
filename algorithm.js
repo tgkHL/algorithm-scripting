@@ -58,6 +58,23 @@ function findLongestWord(str) {
     return longestStr.length;
 }
 
+/**
+ * 单词首字母大写
+ * @param  {[type]} str [description]
+ * @return {[type]}     [description]
+ */
+function titleCase(str) {
+    var arr = str.toLowerCase().split(/\s+/);
+    // console.log(arr)
+    for(var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].replace(/^\w/, function(match) {
+            return match.toUpperCase();
+        });
+    }
+    str = arr.join(' ');
+    return str;
+}
+
 // 测试
-var result = findLongestWord('hello,world.');
+var result = titleCase('HEllo worLd');
 console.log(result);

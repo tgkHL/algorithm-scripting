@@ -59,3 +59,19 @@ function findLongestWord(str) {
 }
 ```
 
+### 单词首字母大写
+
+```javascript
+function titleCase(str) {
+    var arr = str.toLowerCase().split(/\s+/);
+    // console.log(arr)
+    for(var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].replace(/^\w/, function(match) {
+            return match.toUpperCase();
+        });
+    }
+    str = arr.join(' ');
+    return str;
+}
+```
+
