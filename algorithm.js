@@ -94,6 +94,17 @@ function largestOfFour(arr) {
     return result;
 }
 
+/**
+ * 检查字符串是否以指定字符串结尾
+ * @param  {[type]} str    [description]
+ * @param  {[type]} target [description]
+ * @return {[type]}        [description]
+ */
+function confirmEnding(str, target) {
+    var index = str.length - target.length;
+    return str.substr(index) === target ? true : false;
+}
+
 // 测试
-var result = titleCase('HEllo worLd');
+var result = confirmEnding("Bastian", "an");
 console.log(result);
