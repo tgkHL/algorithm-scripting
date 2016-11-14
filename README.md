@@ -101,3 +101,16 @@ function confirmEnding(str, target) {
     return str.substr(index) === target ? true : false;
 }
 ```
+
+### 重复字符串
+
+```javascript
+function repeat(str, num) {
+    if(num < 0) return '';
+    var result = '';
+    for(var i = 0; i < num; i++) {
+        result += str;
+    }
+    return result;
+}
+```

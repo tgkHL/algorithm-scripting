@@ -105,6 +105,16 @@ function confirmEnding(str, target) {
     return str.substr(index) === target ? true : false;
 }
 
+
+function repeat(str, num) {
+    if(num < 0) return '';
+    var result = '';
+    for(var i = 0; i < num; i++) {
+        result += str;
+    }
+    return result;
+}
+
 // 测试
-var result = confirmEnding("Bastian", "an");
+var result = repeat('abc', 3);
 console.log(result);
