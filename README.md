@@ -114,3 +114,12 @@ function repeat(str, num) {
     return result;
 }
 ```
+
+### 截断字符串
+```javascript
+function truncate(str, num) {
+    if(num >= str.length) return str;
+    return str.slice(0, num > 3 ? num-3 : num) + '...';
+}
+```
+

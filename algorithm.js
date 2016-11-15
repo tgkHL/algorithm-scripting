@@ -115,6 +115,11 @@ function repeat(str, num) {
     return result;
 }
 
+function truncate(str, num) {
+    if(num >= str.length) return str;
+    return str.slice(0, num > 3 ? num-3 : num) + '...';
+}
+
 // 测试
 var result = repeat('abc', 3);
 console.log(result);
